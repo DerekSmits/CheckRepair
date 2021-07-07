@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wSoEpry749Ys2+8eD4Xaws4EpP2kU8eYTRFnqj6OSHFtHAADXAIzy83zSgmfgwElWgw0iLRhNMx7X8yain+01A==",
+  "dgSpecHash": "EFCPCrYy+JfNZT0SrnH9LXt4j7F1zeFpSudF4gZEQLbN+OIUsNw9LmdCKBqUnMLrlZPNFX1f/UHNJX3TiP9FaQ==",
   "success": true,
-  "projectFilePath": "H:\\Новая папка\\CheckRepair\\CheckRepair\\CheckRepair.csproj",
+  "projectFilePath": "H:\\Projects\\CheckRepair\\CheckRepair\\CheckRepair.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Ростислав\\.nuget\\packages\\google.apis.core\\1.52.0\\google.apis.core.1.52.0.nupkg.sha512",
     "C:\\Users\\Ростислав\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",

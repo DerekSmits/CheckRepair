@@ -5652,11 +5652,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "H:\\Новая папка\\CheckRepair\\CheckRepair\\CheckRepair.csproj",
+      "projectUniqueName": "H:\\Projects\\CheckRepair\\CheckRepair\\CheckRepair.csproj",
       "projectName": "CheckRepair",
-      "projectPath": "H:\\Новая папка\\CheckRepair\\CheckRepair\\CheckRepair.csproj",
+      "projectPath": "H:\\Projects\\CheckRepair\\CheckRepair\\CheckRepair.csproj",
       "packagesPath": "C:\\Users\\Ростислав\\.nuget\\packages\\",
-      "outputPath": "H:\\Новая папка\\CheckRepair\\CheckRepair\\obj\\",
+      "outputPath": "H:\\Projects\\CheckRepair\\CheckRepair\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Ростислав\\AppData\\Roaming\\NuGet\\NuGet.Config",
