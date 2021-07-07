@@ -28,11 +28,52 @@ namespace CheckRepair.Controllers
             Process.Work();
             return new JsonResult("Work was completed");
         }
-      /*  [HttpPut]
-        public JsonResult Put()
+        [HttpPut]
+        public JsonResult Put(Report report)
         {
-            
+            bool success = true;
+            var document = Docs.Get(report.id);
+            try
+            {
+                if (document != null)
+                {
+                    document = Docs.Update(report);
+                }
+                else
+                {
+                    success = false;
+                }
+            }
+            catch (Exception)
+            {
+                success = false;
+            }
+
+            return success ? new JsonResult($"Update success {report.id}") : new JsonResult("Error");
+
         }
-       */
+        [HttpDelete]
+        public JsonResult Delete(Guid id)
+        {
+            bool success = true;
+            var document = Docs.Get(id);
+            try
+            {
+                if (document != null)
+                {
+                    Docs.Delete(document.id);
+                }
+                else
+                {
+                    success = false;
+                }
+            }
+            catch (Exception)
+            {
+                success = false;
+            }
+            return success ? new JsonResult("Delete success") : new JsonResult("Error");
+        }
+       
     }
 }
