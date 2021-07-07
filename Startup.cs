@@ -1,6 +1,12 @@
+using CheckRepair.Models;
+using CheckRepair.Process.Implementation;
+using CheckRepair.Process.Interfaces;
+using CheckRepair.Repositories.Implimentations;
+using CheckRepair.Repositories.Interfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -25,12 +31,21 @@ namespace CheckRepair
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            string connection = Configuration.GetConnectionString("DefaultConnection");
+            services.AddMvc();
+            services.AddDbContext<ApplicationContext>(options =>
+                options.UseSqlServer(connection));
+            services.AddTransient<IWorkPro, WorkPro>();
+            services.AddTransient<IService<Report>, Service<Report>>();
+            services.AddTransient<IService<Device>, Service<Device>>();
+            services.AddTransient<IService<Worker>, Service<Worker>>();
 
-            services.AddControllers();
-            services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "CheckRepair", Version = "v1" });
-            });
+            /*   services.AddControllers();
+               services.AddSwaggerGen(c =>
+               {
+                   c.SwaggerDoc("v1", new OpenApiInfo { Title = "CheckRepair", Version = "v1" });
+               });
+            */
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
