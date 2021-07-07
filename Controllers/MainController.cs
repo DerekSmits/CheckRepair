@@ -28,8 +28,8 @@ namespace CheckRepair.Controllers
             Process.Work();
             return new JsonResult("Work was completed");
         }
-        [HttpPut]
-       /* public JsonResult Put()
+      /*  [HttpPut]
+        public JsonResult Put()
         {
             
         }
